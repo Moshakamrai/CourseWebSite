@@ -1,0 +1,215 @@
+/* Global Styles */
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: white;
+    font-size: 16px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Hero Section */
+#hero {
+    background: url('FirstSection.gif') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 20px;
+    color: #00f1ff;
+    text-shadow: 2px 2px 5px #ff00ff, 0 0 25px #00f1ff, 0 0 5px #ff00ff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero h1 {
+    font-size: 3.5em;
+    letter-spacing: 5px;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #00f1ff;
+    color: #1f1f1f;
+    font-size: 1.2em;
+    padding: 15px 25px;
+    margin-top: 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: #ff00ff;
+    transform: scale(1.1);
+}
+
+/* Section 1 & 2 (With Swipe Effect) */
+#section1-2 {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.image-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.overlay h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+/* Next Button */
+#next-slide {
+    background: #ff00ff;
+    padding: 20px 40px;
+    font-size: 1.2em;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+#next-slide:hover {
+    background: #00f1ff;
+}
+
+/* GIF Section */
+#slider {
+    padding: 50px 20px;
+    background: url('CourseOutline.gif') no-repeat center center fixed;
+    background-size: contain;
+    height: 80vh; /* Full height section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure the heading can be positioned within */
+}
+
+/* Heading for Course Outline */
+.section-title {
+    position: absolute; /* Positioning the title absolutely within the section */
+    top: 20px; /* Adjust top space as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: 2.5em; /* Size of the title */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adding shadow for better visibility */
+    z-index: 10; /* Ensure the title stays on top of the GIF */
+    font-family: 'Press Start 2P', cursive; /* Retro font style */
+}
+
+
+/* Download and Form Section */
+#download {
+    padding: 50px 20px;
+    background: url('DownloadSection.png') no-repeat center center fixed;
+    background-size: contain;
+    background-position: center center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.download-btn,
+.form-btn {
+    font-size: 1.2em;
+    background: #00f1ff;
+    color: #1f1f1f;
+    padding: 20px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.download-btn:hover,
+.form-btn:hover {
+    background: #ff00ff;
+}
+
+iframe {
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 5px solid #ff00ff;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    color: #ff00ff;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile and Tablet-Friendly */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5em;
+    }
+    #hero p {
+        font-size: 1.2em;
+    }
+    iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
