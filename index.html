@@ -4,64 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unity Game Development Course</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Retro font -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Game Development Course</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Your custom CSS -->
+</head>
 <body>
+
     <!-- Hero Section -->
-    <section id="hero">
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center text-center" style="background: url('FirstSection.gif') no-repeat center center fixed; background-size: cover; height: 100vh;">
         <div class="container">
-            <h1>Unity Game Development Course</h1>
-            <p>Transform from a beginner to creating your own 3D game in just 12 weeks!</p>
-            <a href="#slider" class="cta-button">Course Details</a>
+            <h1 class="display-3 text-light">Unity Game Development Course</h1>
+            <p class="lead text-light">Transform from a beginner to creating your own 3D game in just 12 weeks!</p>
+            <a href="#slider" class="cta-button btn btn-primary btn-lg mt-4">Course Details</a>
         </div>
     </section>
 
     <!-- New Combined Section 1 & 2 (with swipe effect) -->
-    <section id="section1-2">
-        <div class="image-slider">
+    <section id="section1-2" class="container my-5">
+        <div class="image-slider d-flex">
             <div class="image-slide">
-                <img src="Section 2 static image.png" alt="First Image">
+                <img src="Section 2 static image.png" alt="First Image" class="img-fluid">
             </div>
             <div class="image-slide">
-                <img src="Section 3 static image.png" alt="Second Image">
+                <img src="Section 3 static image.png" alt="Second Image" class="img-fluid">
             </div>
         </div>
-        <div class="overlay">
-            
-        </div>
-
-        <!-- Swipe Button (optional) -->
-        <button id="next-slide" class="cta-button">Next</button>
+        <button id="next-slide" class="cta-button btn btn-primary btn-lg mt-4">Next</button>
     </section>
 
-    <!-- GIF Section -->
-    <section id="slider">
-        <div class="container">
-            <h1 class="section-title">COURSE OUTLINE</h1>
-            <div class="gif-container">
-                <!-- Add a GIF here if needed -->
-            </div>
+    <!-- Course Outline Section -->
+    <section id="slider" class="my-5" style="background: url('CourseOutline.gif') no-repeat center center fixed; background-size: contain;">
+        <div class="container text-center">
+            <h1 class="section-title text-light">COURSE OUTLINE</h1>
         </div>
     </section>
-
 
     <!-- Download and Form Section -->
-    <section id="download">
-        <div class="container">
+    <section id="download" class="my-5 py-5" style="background: url('DownloadSection.png') no-repeat center center fixed; background-size: cover;">
+        <div class="container text-center">
             <h2>Get the Course Outline and Fill Out the Form</h2>
             <div class="buttons">
-                <a href="Blue Illustration Game Presentation.pdf" download class="download-btn">Download Course Outline</a>
-                <a href="https://tally.so/r/nPQPMV" class="form-btn">Fill Out the Form</a>
+                <a href="Blue Illustration Game Presentation.pdf" download class="download-btn btn btn-primary btn-lg mx-2">Download Course Outline</a>
+                <a href="https://tally.so/r/nPQPMV" class="form-btn btn btn-outline-light btn-lg mx-2">Fill Out the Form</a>
             </div>
         </div>
     </section>
 
-    <!-- <footer>
-        <div class="container">
-            <p>Made with 💥 by YourGameDev Team</p>
-        </div>
-    </footer> -->
+    <!-- Footer (optional) -->
+    <footer class="text-center text-light py-4">
+        <p>Made with 💥 by YourGameDev Team</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
     <script src="script.js"></script>
 </body>
