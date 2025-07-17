@@ -4,36 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unity Game Development Course</title>
-    <!-- Bootstrap CSS -->
+    <!-- Retro Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS (optional) for responsiveness and utility classes)-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Your custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unity Game Development Course</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <!-- Your custom CSS -->
-</head>
 <body>
 
     <!-- Hero Section -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center text-center" style="background: url('FirstSection.gif') no-repeat center center fixed; background-size: cover; height: 100vh;">
-        <div class="container">
-            <h1 class="display-3 text-light">Unity Game Development Course</h1>
-            <p class="lead text-light">Transform from a beginner to creating your own 3D game in just 12 weeks!</p>
-            <a href="#slider" class="cta-button btn btn-primary btn-lg mt-4">Course Details</a>
+    <section id="hero">
+        <div class="container text-center">
+            <h1>Unity Game Development Course</h1>
+            <p>Transform from a beginner to creating your own 3D game in just 12 weeks!</p>
+            <a href="#slider" class="cta-button">Course Details</a>
         </div>
     </section>
 
-    <!-- New Combined Section 1 & 2 (with swipe effect) -->
-    <section id="section1-2" class="container my-5">
-        <div class="image-slider d-flex">
+    <!-- New Combined Section 1 & 2 (Swipe Effect with Static Images) -->
+    <section id="section1-2">
+        <div class="image-slider">
             <div class="image-slide">
                 <img src="Section 2 static image.png" alt="First Image" class="img-fluid">
             </div>
@@ -41,36 +32,37 @@
                 <img src="Section 3 static image.png" alt="Second Image" class="img-fluid">
             </div>
         </div>
-        <button id="next-slide" class="cta-button btn btn-primary btn-lg mt-4">Next</button>
+        <button id="next-slide" class="cta-button btn btn-primary btn-lg">Next</button>
     </section>
 
-    <!-- Course Outline Section -->
-    <section id="slider" class="my-5" style="background: url('CourseOutline.gif') no-repeat center center fixed; background-size: contain;">
-        <div class="container text-center">
-            <h1 class="section-title text-light">COURSE OUTLINE</h1>
-        </div>
-    </section>
-
-    <!-- Download and Form Section -->
-    <section id="download" class="my-5 py-5" style="background: url('DownloadSection.png') no-repeat center center fixed; background-size: cover;">
-        <div class="container text-center">
-            <h2>Get the Course Outline and Fill Out the Form</h2>
-            <div class="buttons">
-                <a href="Blue Illustration Game Presentation.pdf" download class="download-btn btn btn-primary btn-lg mx-2">Download Course Outline</a>
-                <a href="https://tally.so/r/nPQPMV" class="form-btn btn btn-outline-light btn-lg mx-2">Fill Out the Form</a>
+    <!-- GIF Section with Course Outline Title -->
+    <section id="slider" class="position-relative">
+        <div class="container">
+            <h1 class="section-title">COURSE OUTLINE</h1>
+            <div class="gif-container">
+                <img src="CourseOutline.gif" alt="Course Outline GIF" class="img-fluid"> <!-- Add your GIF here -->
             </div>
         </div>
     </section>
 
+    <!-- Download and Form Section -->
+    <section id="download" class="text-center">
+        <h2>Get the Course Outline and Fill Out the Form</h2>
+        <div class="buttons">
+            <a href="Blue Illustration Game Presentation.pdf" download class="download-btn btn btn-primary btn-lg">Download Course Outline</a>
+            <a href="https://tally.so/r/nPQPMV" class="form-btn btn btn-outline-light btn-lg">Fill Out the Form</a>
+        </div>
+    </section>
+
     <!-- Footer (optional) -->
-    <footer class="text-center text-light py-4">
+    <footer class="text-center py-4">
         <p>Made with 💥 by YourGameDev Team</p>
     </footer>
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
+    <!-- Your custom JS -->
     <script src="script.js"></script>
 </body>
 </html>

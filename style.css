@@ -6,10 +6,13 @@ body {
     background: #000;
     color: white;
     font-size: 16px;
+    box-sizing: border-box; /* Prevent layout shifting */
 }
 
+/* Container for sections */
 .container {
-    width: 80%;
+    width: 90%; /* Full width for smaller screens */
+    max-width: 1200px; /* Max width for large screens */
     margin: 0 auto;
     text-align: center;
 }
@@ -64,11 +67,16 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    flex-direction: column; /* Ensure content is stacked vertically */
+    align-items: center; /* Center-align the content horizontally */
 }
 
+/* Adjust slider style */
 .image-slider {
     display: flex;
     transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
 }
 
 .image-slide {
@@ -85,6 +93,7 @@ body {
     object-fit: cover;
 }
 
+/* Overlay */
 .overlay {
     position: absolute;
     top: 20%;
@@ -92,7 +101,7 @@ body {
     transform: translateX(-50%);
     color: white;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5); /* Slight background for better visibility */
     padding: 20px;
     border-radius: 10px;
 }
@@ -127,26 +136,33 @@ body {
 /* GIF Section */
 #slider {
     padding: 50px 20px;
-    background: url('CourseOutline.gif') no-repeat center center fixed;
-    background-size: contain;
+    /* Remove the background GIF to avoid the double rendering */
+    background: none; /* No background GIF */
     height: 80vh; /* Full height section */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Ensure the heading can be positioned within */
+    position: relative;
 }
 
 /* Heading for Course Outline */
 .section-title {
-    position: absolute; /* Positioning the title absolutely within the section */
-    top: 20px; /* Adjust top space as needed */
+    position: absolute;
+    top: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
-    font-size: 2.5em; /* Size of the title */
+    transform: translateX(-50%);
+    font-size: 2.5em;
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adding shadow for better visibility */
-    z-index: 10; /* Ensure the title stays on top of the GIF */
-    font-family: 'Press Start 2P', cursive; /* Retro font style */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* GIF Container */
+.gif-container img {
+    max-width: 100%; /* Scale GIF to 100% of the container's width */
+    max-height: 100%; /* Ensure GIF doesn't overflow */
+    object-fit: contain; /* Maintain aspect ratio, ensure GIF fits without distortion */
 }
 
 
@@ -203,19 +219,6 @@ html {
 /* Mobile and Tablet-Friendly */
 @media (max-width: 768px) {
     #hero h1 {
-        font-size: 2.5em;
-    }
-    #hero p {
-        font-size: 1.2em;
-    }
-    iframe {
-        width: 100%;
-        height: 400px;
-    }
-
-    /* Ensure sections adapt well on smaller screens */
-@media (max-width: 768px) {
-    #hero h1 {
         font-size: 2.5rem;
     }
 
@@ -223,7 +226,8 @@ html {
         font-size: 1.2rem;
     }
 
-    #section1-2 .image-slider {
+    /* Image Slider */
+    .image-slider {
         flex-direction: column;
     }
 
@@ -232,8 +236,8 @@ html {
     }
 
     .cta-button {
-        font-size: 1.2rem;
-        padding: 12px 24px;
+        font-size: 0.6em;  /* 50% smaller than the previous size */
+        padding: 8px 16px;  /* 50% smaller padding */
     }
 
     #download .buttons {
@@ -250,6 +254,56 @@ html {
 
     .section-title {
         font-size: 2rem;
+    }
+
+    /* Further reduce button size for mobile */
+    .cta-button, .download-btn, .form-btn {
+        font-size: 0.6em;  /* Reduce font size to 50% */
+        padding: 8px 16px;  /* Further reduce padding by 50% */
+    }
+
+    /* Stack the content vertically and move Next button under the GIF */
+    #section1-2 {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /* Adjust Next Button */
+    #next-slide {
+        margin-top: 20px; /* Position it below the GIF */
+        font-size: 0.6em; /* Smaller size */
+        padding: 8px 16px; /* Smaller padding */
+        background: #ff00ff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        
+    }
+
+    /* Button Hover Effects */
+    #next-slide:hover {
+        background: #00f1ff;
+    }
+}
+
+/* Tablet and larger screens */
+@media (max-width: 1024px) {
+    .image-slider {
+        flex-direction: column;
+    }
+
+    .image-slide img {
+        height: auto;
+    }
+
+    /* Mobile and Tablet-Friendly */
+@media (max-width: 768px) {
+    #next-slide {
+        display: none; /* Hide the Next button on smaller screens */
     }
 }
 
