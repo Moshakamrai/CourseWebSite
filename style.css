@@ -162,7 +162,7 @@ body {
 .gif-container img {
     max-width: 100%; /* Scale GIF to 100% of the container's width */
     max-height: 100%; /* Ensure GIF doesn't overflow */
-    object-fit: contain; /* Maintain aspect ratio, ensure GIF fits without distortion */
+    object-fit: auto; /* Maintain aspect ratio, ensure GIF fits without distortion */
 }
 
 
