@@ -4,72 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unity Game Development Course</title>
-    <!-- Retro Font -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS (optional) for responsiveness and utility classes)-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Your custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background-blob blob1"></div>
+    <div class="background-blob blob2"></div>
 
-    <!-- Hero Section -->
     <section id="hero">
-        <div class="container text-center">
+        <div class="container">
             <h1>Unity Game Development Course</h1>
             <p>Transform from a beginner to creating your own 3D game in just 12 weeks!</p>
-            <a href="#slider" class="cta-button">Course Details</a>
+            <a href="#new-slider-section" class="cta-button">Course Details</a>
         </div>
     </section>
 
-    <!-- New Combined Section 1 & 2 (Swipe Effect with Static Images) -->
-    <section id="section1-2">
-        <div class="image-slider">
-            <div class="image-slide">
-                <img src="Section 2 static image.png" alt="First Image" class="img-fluid">
+    <section id="new-slider-section">
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="Section 2 static image.png" alt="First Slide Image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="Section 3 static image.png" alt="Second Slide Image">
+                </div>
             </div>
-            <div class="image-slide">
-                <img src="Section 3 static image.png" alt="Second Image" class="img-fluid">
-            </div>
+            <button class="carousel-button prev" id="carousel-prev">&#10094;</button>
+            <button class="carousel-button next" id="carousel-next">&#10095;</button>
         </div>
-        <button id="next-slide" class="cta-button btn btn-primary btn-lg">Next</button>
     </section>
 
-    <!-- GIF Section with Course Outline Title -->
-    <section id="slider" class="position-relative">
+    <section id="gif-section">
         <div class="container">
-            
-            <div class="gif-container">
-                <img src="CourseOutline.gif" alt="Course Outline GIF" class="img-fluid"> <!-- Add your GIF here -->
+             <img src="CourseOutline.gif" alt="Course Outline GIF" class="content-gif">
+        </div>
+    </section>
+
+    <section id="download">
+        <div class="container">
+            <h2>Get the Course Outline and Fill Out the Form</h2>
+            <div class="buttons">
+                <a href="Blue Illustration Game Presentation.pdf" download class="download-btn">Download Course Outline</a>
+                <a href="https://tally.so/r/nPQPMV" class="form-btn">Fill Out the Form</a>
             </div>
         </div>
     </section>
 
-    <!-- Download and Form Section -->
-    <section id="download" class="text-center">
-        <h2>Get the Course Outline and Fill Out the Form</h2>
-        <div class="buttons">
-            <a href="Blue Illustration Game Presentation.pdf" download class="download-btn btn btn-primary btn-lg">Download Course Outline</a>
-            <a href="https://tally.so/r/nPQPMV" class="form-btn btn btn-outline-light btn-lg">Fill Out the Form</a>
+    <section id="game">
+        <div class="container">
+            <h1>Play the Game</h1>
+            <div class="game-wrapper">
+                <iframe src="Game/index.html" frameborder="0"></iframe>
+            </div>
         </div>
     </section>
 
-     <!-- WebGL Game Embed Section -->
-    <section id="game">
-        <h1>Play the Game</h1>
-        <iframe src="Game/index.html" width="100%" height="600px" frameborder="0"></iframe>
-    </section>
+    <!-- <section id="footer-section">
+        <div class="container">
+            <p></p>
+        </div>
+    </section> -->
 
-
-    <!-- Footer (optional) -->
-    <footer class="text-center py-4">
-        <p></p>
-    </footer>
-
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <!-- Your custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
